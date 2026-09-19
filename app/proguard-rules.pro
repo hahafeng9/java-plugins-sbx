@@ -1,0 +1,2 @@
+-keep class com.sbx.plugins.sandbox.SbxBridge { *; }
+-keepclasseswithmembernames class * { native <methods>; }
