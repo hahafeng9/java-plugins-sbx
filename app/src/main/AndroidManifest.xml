@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".PluginHostApp"
+        android:allowBackup="false"
+        android:label="SBX Plugin Host"
+        android:supportsRtl="true">
+
+        <!-- 所有 Proxy 都不加 android:process，全部在宿主主进程 -->
+        <activity
+            android:name=".proxy.SbxProxyActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <service
+            android:name=".proxy.SbxProxyService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".proxy.SbxProxyReceiver"
+            android:exported="false" />
+    </application>
+</manifest>
